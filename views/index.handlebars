@@ -1,0 +1,50 @@
+Index/ Annoucement Page
+
+<h2> Annoucment board</h2>
+
+<p>list of events, news and discussion going on in your area</p>
+
+{{#each aEntries}}
+<div id="annoucmentEntries">
+    <h3>{{this.posterName}}</h3>
+    <br>
+    <h3>{{this.title}}</h3>
+    <br>
+    <h3>{{this.hood}}</h3>
+    <br>
+    <h3>{{this.aMsg}}</h3>
+</div>
+{{/each}}
+
+<div>
+    <h1>Create an Annoucment</h1>
+
+    <div id="annouceMsg">
+        Whether it is a block party, a community street cleaning or just want to talk about things going on in your hood, use the
+        field below to make an annoucment and start a discussion.
+    </div>
+
+
+    <form action="/addAnnoucement" method="POST">
+        <div>
+            Name<br>
+            <input type="text" id="posterName">
+        </div>
+        <div>
+            Title<br>
+            <input type="text" id="title">
+        </div>
+        <div>
+            Neighborhood<br>
+            <input type="text" hood="hood">
+        </div>
+        What's goin on? <br>
+        <textarea id="aMsg"> 
+    </textarea>
+</div>
+
+<button type="submit">send</button>
+
+</form>
+
+</div>
